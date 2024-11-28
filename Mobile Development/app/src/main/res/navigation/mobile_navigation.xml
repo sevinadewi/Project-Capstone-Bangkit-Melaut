@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_rumah">
+
+    <fragment
+        android:id="@+id/nav_rumah"
+        android:name="com.example.melautapp.ui.rumah.RumahFragment"
+        android:label="@string/menu_rumah"
+        tools:layout="@layout/fragment_rumah" />
+
+    <fragment
+        android:id="@+id/nav_komunitas"
+        android:name="com.example.melautapp.ui.komunitas.KomunitasFragment"
+        android:label="@string/menu_komunitas"
+        tools:layout="@layout/fragment_komunitas" />
+
+    <fragment
+        android:id="@+id/nav_editprofil"
+        android:name="com.example.melautapp.ui.editProfil.EditProfilFragment"
+        android:label="@string/menu_editprofil"
+        tools:layout="@layout/fragment_editprofil" />
+</navigation>
