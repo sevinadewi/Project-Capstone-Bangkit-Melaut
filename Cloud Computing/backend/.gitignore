@@ -30,3 +30,5 @@ Dockerfile
 
 # Windows system files
 Thumbs.db
+
+uploads/
