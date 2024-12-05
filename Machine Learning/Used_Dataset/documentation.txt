@@ -1,0 +1,11 @@
+Date: Date of the observation (in YYYY-MM-DD format).
+Tn: Minimum temperature (°C).
+Tx: Maximum temperature (°C).
+Tavg: Average temperature (°C).
+RH_avg: Average relative humidity (%).
+RR: Rainfall (mm).
+ss: Sunshine duration (hours).
+ff_x: Maximum wind speed (m/s).
+ddd_x: Maximum wind direction (°).
+ff_avg: Average wind speed (m/s).
+rad(m): Normalized tidal height from the tidal dataset (in meters).
