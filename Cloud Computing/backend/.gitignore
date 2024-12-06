@@ -15,8 +15,8 @@ yarn-error.log
 /build
 
 # Docker files
-Dockerfile
-.dockerignore
+# Dockerfile
+# .dockerignore
 
 # Environment variables
 .env
