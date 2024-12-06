@@ -14,7 +14,7 @@ import postRoutes from "./routes/PostsRoutes.js";
 // 
 import homeRoutes from "./routes/homeRoutes.js";
 import weatherRoutes from "./routes/weather.js";
-
+import ResultRoutes from "./routes/ResultRoutes.js";
 
 
 
@@ -46,5 +46,7 @@ app.use(ProfileRoutes);
 app.use(router);
 app.use(postRoutes);
 app.use("/home", homeRoutes); 
+app.use('/api', ResultRoutes);
+
 app.listen(5000, () => console.log('Server running at port 5000'));
 

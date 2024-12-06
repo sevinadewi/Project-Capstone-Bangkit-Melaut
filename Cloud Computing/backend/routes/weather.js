@@ -28,7 +28,7 @@
 
 import express from "express";
 // import { getWeatherByCoordinates } from "../services/weatherService";
-import { getWeatherData } from "../services/weatherService.js"; // Tambahkan .js jika diperlukan
+import { getCurrentWeather } from "../services/weatherService.js"; // Tambahkan .js jika diperlukan
 
 const router = express.Router();
 
@@ -43,7 +43,7 @@ router.get("/", async (req, res) => {
 
   try {
     // const weatherData = await getWeatherByCoordinates(lat, lon);
-    const weatherData = await getWeatherData(lat, lon);
+    const weatherData = await getCurrentWeather(lat, lon);
 
     res.json(weatherData);
   } catch (error) {

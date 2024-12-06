@@ -1,31 +1,6 @@
 import axios from "axios";
 
 
-// Fungsi untuk memanggil API OpenWeather berdasarkan koordinat
-// async function getWeatherByCoordinates(lat, lon) {
-//   const API_KEY = process.env.API_KEY; // Baca API key dari .env
-//   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-
-//   try {
-//     const response = await axios.get(url);
-//     const rain = response.data.rain ? response.data.rain["1d"] : 0;
-//     console.log(response.data)
-//     return {
-//       location: response.data.name || "Unknown location",
-//       temperature: response.data.main.temp,
-//       temperature_max: response.data.main.temp_max,
-//       temperature_min: response.data.main.temp_min,
-//       humidity: response.data.main.humidity,
-//       weather: response.data.weather[0].description,
-//       wind_speed: response.data.wind.speed,
-//       rain_1d: rain, //curah hujan dalam 1 jam
-//     };
-//   } catch (error) {
-//     console.error("Error fetching weather data:", error.message);
-//     throw new Error("Unable to fetch weather data.");
-//   }
-// }
-
 
 export async function getCurrentWeather(lat, lon) {
   const API_KEY = process.env.API_KEY;
@@ -84,38 +59,38 @@ export async function getCurrentWeather(lat, lon) {
 //   }
 // }
 
- async function getWeatherData(lat, lon) {
-  try {
-    const currentWeather = await getCurrentWeather(lat, lon);
-    //const weatherForecast = await getWeatherForecast(lat, lon);
+//  async function getWeatherData(lat, lon) {
+//   try {
+//     const currentWeather = await getCurrentWeather(lat, lon);
+//     //const weatherForecast = await getWeatherForecast(lat, lon);
 
-    return {
-      currentWeather,
-      //weatherForecast,
-    };
-  } catch (error) {
-    console.error("Error fetching weather data:", error.message);
-    throw new Error("Unable to fetch weather data.");
-  }
-}
+//     return {
+//       currentWeather,
+//       //weatherForecast,
+//     };
+//   } catch (error) {
+//     console.error("Error fetching weather data:", error.message);
+//     throw new Error("Unable to fetch weather data.");
+//   }
+// }
 
 
- async function getClusteringResult(weatherData) {
-  const url = `MANA API ML NYA ????`;
+//  async function getClusteringResult(weatherData) {
+//   const url = `MANA API ML NYA ????`;
 
-  // try {
-  //   // const response = await axios.get(url);
-  //   console.log(response.data)
-  //   return {
-  //     clustering: response.data.clustering ,
-  //   };
-  // } catch (error) {
-  //   console.error("Error fetching weather data:", error.message);
-  //   throw new Error("Unable to fetch weather data.");
-  // }
-}
+//   // try {
+//   //   // const response = await axios.get(url);
+//   //   console.log(response.data)
+//   //   return {
+//   //     clustering: response.data.clustering ,
+//   //   };
+//   // } catch (error) {
+//   //   console.error("Error fetching weather data:", error.message);
+//   //   throw new Error("Unable to fetch weather data.");
+//   // }
+// }
 
-// module.exports = { getWeatherByCoordinates, getClusteringResult };
-// module.exports = { getWeatherData, getClusteringResult };
+// // module.exports = { getWeatherByCoordinates, getClusteringResult };
+// // module.exports = { getWeatherData, getClusteringResult };
 
-export { getWeatherData, getClusteringResult };
+// export { getWeatherData, getClusteringResult };

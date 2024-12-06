@@ -1,5 +1,5 @@
 // controllers/homeController.js
-import { getWeatherData } from "../services/weatherService.js";
+import { getCurrentWeather } from "../services/weatherService.js";
 import { getPosts } from "../controller/PostsController.js";
 
 const getDayName = (date) => {
@@ -10,7 +10,7 @@ const getDayName = (date) => {
 export const getHomeData = async (lat, lon) => {
   try {
     // Dapatkan data cuaca
-    const weatherData = await getWeatherData(lat, lon);
+    const weatherData = await getCurrentWeather(lat, lon);
     
     console.log("Fetching posts...");
     // Dapatkan data postingan
