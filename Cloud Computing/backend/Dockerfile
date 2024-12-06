@@ -17,7 +17,11 @@ COPY . .
 # ENV NODE_ENV=production
 
 # Expose port yang digunakan oleh aplikasi
-EXPOSE 5000
+# EXPOSE 5000
+
+# Expose port yang digunakan oleh Cloud Run
+ENV PORT=8080
+EXPOSE 8080
 
 # Jalankan aplikasi
 CMD ["node", "index.js"]
