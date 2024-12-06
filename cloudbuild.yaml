@@ -1,0 +1,15 @@
+steps:
+  # Langkah untuk checkout kode dari GitHub repository
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['clone', 'https://github.com/sevinadewi/Project-Capstone-Bangkit-Melaut']
+
+  # Langkah untuk membangun Docker image dari folder yang diinginkan
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/project-capstone-image'
+      - './cloud_computing/backend'  # Menentukan folder tujuan (path relatif)
+
+images:
+  - 'gcr.io/$PROJECT_ID/project-capstone-image'
